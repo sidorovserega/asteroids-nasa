@@ -1,0 +1,18 @@
+.header__container {
+  margin: 16px;
+}
+
+.header__container__logo {
+  width: 288px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+.header__container__main_title {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+

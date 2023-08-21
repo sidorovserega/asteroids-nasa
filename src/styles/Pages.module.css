@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  position: relative;
+}
+
+.main__img {
+  width: 400px;
+  height: 620px;
+  position: fixed;
+}
+
+@media screen and (max-width: 1100px) {
+  .main__img {
+    width: 307px;
+    height: 436px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .main__img {
+    transform: translate(-329px);
+    margin-top: 132px;
+    width: 377px;
+    height: 436px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .main {
+    display: block;
+  }
+}
