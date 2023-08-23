@@ -11,7 +11,9 @@ export const fetchAsteroids = async (dateActive: string): Promise<Props> => {
 };
 
 export const fetchNextAsteroidList = async (url: string): Promise<Props> => {
-  const { data } = await axios.get<Props>(`${url}`);
+  const resultUrl = url.slice(0, 4) + 's' + url.slice(4); 
+  
+  const { data } = await axios.get<Props>(`${resultUrl}`);
   return data;
 };
 
