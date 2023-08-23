@@ -444,13 +444,13 @@ textarea {
 
 @font-face {
   font-family: 'Helvetica';
-  src: url(/fonts/helvetica_regular.otf) format('otf');
+  src: url(./fonts/helvetica_regular.otf) format('otf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Helvetica';
-  src: url(/fonts/helvetica_boldoblique.otf) format('otf');
+  src: url(./fonts/helvetica_bold.otf) format('otf');
   font-weight: 700;
 }
 

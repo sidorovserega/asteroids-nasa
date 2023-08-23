@@ -9,6 +9,7 @@ import BasketElement from '@/components/BasketElement/BasketElement';
 import { Context } from './_app';
 import { fetchAsteroids } from '@/axios';
 import Services from '@/services/services';
+import ImagePlainet from '../assets/img/planeta_zemlia_kosmos.png';
 
 interface HomeProps {
   asteroidListToDate: Props;
@@ -32,7 +33,7 @@ export function HomePage({ asteroidListToDate, nextList }: HomeProps): JSX.Eleme
       <main className={style.main}>
         <Image
           className={style.main__img}
-          src="../assets/img/planeta_zemlia_kosmos.png"
+          src={ImagePlainet}
           width={400}
           height={620}
           alt="Изображение планеты Земля"
