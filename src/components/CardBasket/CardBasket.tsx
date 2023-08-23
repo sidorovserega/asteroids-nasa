@@ -16,7 +16,7 @@ const CardBasket = ({item}: Props) => {
       <span className={style.card__date}>{item.close_approach_data[0].close_approach_date_full.slice(0, item.close_approach_data[0].close_approach_date_full.indexOf(' ')+1)}</span>
       <div className={style.card__wrapper}>
         <div className={style.distance_container}>
-          <span className={style.distance_container__distance}>{Math.round(Number(item.close_approach_data[0].miss_distance.lunar)) + 'лунных орбит'}</span>
+          <span className={style.distance_container__distance}>{Math.round(Number(item.close_approach_data[0].miss_distance.lunar)) + ' лунных орбит'}</span>
           <svg className={style.distance_container__distance__svg} viewBox="0 0 105 6" fill="none">
             <path
               d="M0 3L5 5.88675L5 0.113249L0 3ZM105 3.00001L100 0.113257L100 5.88676L105 3.00001ZM4.5 3.5L100.5 3.50001L100.5 2.50001L4.5 2.5L4.5 3.5Z"

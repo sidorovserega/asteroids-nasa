@@ -3,9 +3,10 @@ import style from '../../styles/asteroidPage.module.css';
 import Image from 'next/image';
 import ImgLittleAsteroid from '../../assets/img/little_asteroid.png';
 import ImgBigAsteroid from '../../assets/img/big_asteroid.png';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetServerSidePropsContext, PreviewData } from 'next';
 import { Asteroid } from '@/interface/items.interface';
 import { fetchAsteroidInfo } from '@/axios';
+import { ParsedUrlQuery } from 'querystring';
 
 type Props = {
   data: Asteroid;
@@ -52,7 +53,7 @@ const AsteroidPage = ({ data }: Props) => {
 export default AsteroidPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const data = await fetchAsteroidInfo(context.params.id);
+  const data = await fetchAsteroidInfo(context);
 
   if (!data) {
     return {

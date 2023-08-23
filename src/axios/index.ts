@@ -1,5 +1,6 @@
 import { Asteroid, Props } from '@/interface/items.interface';
 import axios from 'axios';
+import { GetServerSidePropsContext, PreviewData } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
 export const fetchAsteroids = async (dateActive: string): Promise<Props> => {
@@ -14,9 +15,9 @@ export const fetchNextAsteroidList = async (url: string): Promise<Props> => {
   return data;
 };
 
-export const fetchAsteroidInfo = async (id: string | undefined | string[]): Promise<Asteroid> => {
+export const fetchAsteroidInfo = async (context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>): Promise<Asteroid> => {
   const { data } = await axios.get<Asteroid>(
-    `https://api.nasa.gov/neo/rest/v1/neo/${id}?api_key=WAKLSJLo13ivmNRNuyOHk8ohMvPrhMO1uNFRlV2H`,
+    `https://api.nasa.gov/neo/rest/v1/neo/${context.params && context.params.id}?api_key=WAKLSJLo13ivmNRNuyOHk8ohMvPrhMO1uNFRlV2H`,
   );
   return data;
 };

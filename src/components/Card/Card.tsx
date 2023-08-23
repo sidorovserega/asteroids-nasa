@@ -28,7 +28,7 @@ const Card = ({ item, distanceActive, hundleAdded }: Props) => {
 
   return (
     <li className={style.card}>
-      <Link href={`/asteroids/${item.id}`}>
+      <Link href={`/asteroids/${item.id}`} className={style.card__link}>
         <span className={style.card__date}>
           {item.close_approach_data[0].close_approach_date_full.slice(
             0,
@@ -41,7 +41,7 @@ const Card = ({ item, distanceActive, hundleAdded }: Props) => {
           <span className={style.distance_container__distance}>
             {distanceActive === 'km'
               ? `${formatterKilometers} км`
-              : Math.round(Number(item.close_approach_data[0].miss_distance.lunar))}
+              : `${Math.round(Number(item.close_approach_data[0].miss_distance.lunar))} лунных орбит`}
           </span>
           <svg className={style.distance_container__distance__svg} viewBox="0 0 105 6" fill="none">
             <path
