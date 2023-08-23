@@ -32,7 +32,7 @@ export function HomePage({ asteroidListToDate, nextList }: HomeProps): JSX.Eleme
       <main className={style.main}>
         <Image
           className={style.main__img}
-          src="/img/planeta_zemlia_kosmos.png"
+          src="../assets/img/planeta_zemlia_kosmos.png"
           width={400}
           height={620}
           alt="Изображение планеты Земля"

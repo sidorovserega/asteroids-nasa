@@ -10,7 +10,7 @@ function Header({}: Props) {
       <div className={style.header__container}>
         <Image
           className={style.header__container__logo}
-          src="/img/ARMAGEDDON_2023.png"
+          src="../../assets/img/ARMAGEDDON_2023.png"
           width={288}
           height={32}
           alt="Логотип _ ARMAGEDON 2023"
